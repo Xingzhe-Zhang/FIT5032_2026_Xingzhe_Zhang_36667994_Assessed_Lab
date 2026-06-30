@@ -1,7 +1,7 @@
 <script setup>
-import JSONView from './components/JSON.vue'
+import JSON from "./components/JSON.vue"
 </script>
 
 <template>
-  <JSONView />
+  <JSON />
 </template>
