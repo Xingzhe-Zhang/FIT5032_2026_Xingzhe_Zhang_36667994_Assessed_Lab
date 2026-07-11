@@ -2,7 +2,7 @@
 
 This repository stores lab work and learning tasks for **FIT5032 Internet Applications Development**. It contains Vue.js projects completed for the assessed labs and will also be used for later assessment work.
 
-The App development code is stored in the repository [FIT5032_2026_Xingzhe_Zhang](https://github.com/Xingzhe-Zhang/FIT5032_2026_Xingzhe_Zhang_36667994).
+The App development code is stored in the private repository [FIT5032_2026_Xingzhe_Zhang](https://github.com/Xingzhe-Zhang/FIT5032_2026_Xingzhe_Zhang_36667994).
 
 ## Student Information
 
@@ -10,10 +10,6 @@ The App development code is stored in the repository [FIT5032_2026_Xingzhe_Zhang
 - **Student ID:** 36667994
 - **Course:** FIT5032 Internet Applications Development
 - **Semester:** 2026
-
-## Repository Notice
-
-This is a private personal course repository. It should remain private to protect academic integrity and prevent other students from copying assessed work.
 
 ## Project Structure
 
