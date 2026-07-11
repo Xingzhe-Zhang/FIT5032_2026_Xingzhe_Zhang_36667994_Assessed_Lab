@@ -15,8 +15,8 @@ The App development code is stored in the private repository [FIT5032_2026_Xingz
 
 ```text
 FIT5032_2026_Xingzhe_Zhang_36667994/
-|-- week1-vue-app/      # Week 1 Vue 3 introductory lab
-`-- xzhang-library/     # Week 2 and Week 3 library web application labs
+├── 📁 week1-vue-app/      # Week 1: Vue 3 introductory lab
+└── 📁 xzhang-library/     # Week 2 & 3: Library web application labs
 ```
 
 ## Week 1: Intro to Vue JS 3
