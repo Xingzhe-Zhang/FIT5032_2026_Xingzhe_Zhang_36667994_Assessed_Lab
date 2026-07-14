@@ -16,7 +16,7 @@ This repository stores lab work and learning tasks for **FIT5032 Internet Applic
 ```text
 FIT5032_2026_Xingzhe_Zhang_36667994_Assessed_Lab/
 ├── 📁 week1-vue-app/      # Week 1: Vue 3 introductory lab
-└── 📁 xzhang-library/     # Week 2 & 3: Library web application labs
+└── 📁 xzhang-library/     # Week 2~4: Library web application labs
 ```
 
 ## Week 1: Intro to Vue JS 3
