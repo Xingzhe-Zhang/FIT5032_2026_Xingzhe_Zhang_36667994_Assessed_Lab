@@ -4,18 +4,31 @@ import BHeader from './components/BHeader.vue'
 import LibraryRegistrationForm from './components/LibraryRegistrationForm.vue'
 </script>
 
-<template>
+<!-- <template>
   <header>
     <BHeader />
   </header>
 
   <main>
     <LibraryRegistrationForm />
-    <!-- <JSONLab /> -->
+    <JSONLab />
+  </main>
+</template> -->
+<template>
+  <header>
+    <BHeader />
+  </header>
+
+  <main class="app-container">
+    <router-view />
   </main>
 </template>
 
 <style scoped>
+.app-container {
+  min-height: 80vh;
+  padding-bottom: 2rem;
+}
 /* header {
   line-height: 1.5;
 }

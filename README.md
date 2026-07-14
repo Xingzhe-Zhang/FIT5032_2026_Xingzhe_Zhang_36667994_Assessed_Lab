@@ -15,8 +15,33 @@ This repository stores lab work and learning tasks for **FIT5032 Internet Applic
 
 ```text
 FIT5032_2026_Xingzhe_Zhang_36667994_Assessed_Lab/
-├── 📁 week1-vue-app/      # Week 1: Vue 3 introductory lab
-└── 📁 xzhang-library/     # Week 2~4: Library web application labs
+├── 📁 week1-vue-app/          # Week 1: Vue 3 introductory lab
+├── 📁 xzhang-library/         # Week 2–4: Library web application labs
+└── 📁 NoMash-Library/   # Week 5: Events, Vue DevTools and Vue Router lab
+```
+
+## Running a Project
+
+Open a terminal in the required project folder, install dependencies and start the development server.
+
+```sh
+cd week1-vue-app
+npm install
+npm run dev
+```
+
+or:
+
+```sh
+cd xzhang-library
+npm install
+npm run dev
+```
+
+Then open the localhost URL shown in the terminal, for example:
+
+```text
+http://localhost:5173/
 ```
 
 ## Week 1: Intro to Vue JS 3
@@ -161,26 +186,60 @@ Technologies used:
 - `@primevue/themes`
 - PrimeVue DataTable
 
-## Running a Project
+## Week 5: Events, Vue DevTools and Vue Router
 
-Open a terminal in the required project folder, install dependencies and start the development server.
+Week 5 extends the NoMash Library starter project by adding additional event handling, component debugging with Vue DevTools, and routing functionality with Vue Router.
 
-```sh
-cd week1-vue-app
-npm install
-npm run dev
-```
+Main features:
 
-or:
+- Add a Confirm Password field to the library registration form
+- Validate whether Password and Confirm Password match
+- Use `@blur` to trigger confirm password validation after the user leaves the field
+- Display `Passwords do not match.` when the two password fields are different
+- Add a green feedback message when Reason For Joining contains the word `friend`
+- Add a Suburb field using `v-bind:value` to demonstrate one-way data binding
+- Use Vue DevTools to inspect component state and compare `v-model` with `v-bind`
+- Install and configure Vue Router
+- Move the registration form into `src/views/HomeView.vue`
+- Create `AboutView.vue`, `LoginView.vue`, and `AccessDeniedView.vue`
+- Use `router-view` to render route components
+- Use `router-link` for navigation
+- Protect the About page using a navigation guard
+- Redirect unauthenticated users to Login
+- Show Access Denied for invalid login attempts
+- Show Login or Logout based on authentication state
 
-```sh
-cd xzhang-library
-npm install
-npm run dev
-```
+Demo login credentials:
 
-Then open the localhost URL shown in the terminal, for example:
+- Username: `student`
+- Password: `Library@123`
 
-```text
-http://localhost:5173/
-```
+Key files:
+
+- `src/views/HomeView.vue`
+- `src/views/AboutView.vue`
+- `src/views/LoginView.vue`
+- `src/views/AccessDeniedView.vue`
+- `src/router/index.js`
+- `src/components/BHeader.vue`
+- `src/auth.js`
+- `src/App.vue`
+- `src/main.js`
+
+Technologies used:
+
+- Vue.js 3 Composition API
+- Vue Router
+- Navigation guards
+- `router-link`
+- `router-view`
+- `v-model`
+- `v-bind`
+- `@blur`
+- `@input`
+- `@submit.prevent`
+- `@click`
+- Vue DevTools
+- Bootstrap 5
+- PrimeVue
+
