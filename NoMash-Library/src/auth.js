@@ -3,6 +3,7 @@ import { ref } from 'vue'
 const isAuthenticated = ref(localStorage.getItem('library-auth') === 'true')
 
 const login = (username, password) => {
+  // Fixed username and password
   const validUsername = 'student'
   const validPassword = 'Library@123'
 
@@ -20,4 +21,8 @@ const logout = () => {
   localStorage.removeItem('library-auth')
 }
 
-export { isAuthenticated, login, logout }
+export { 
+  isAuthenticated, 
+  login, 
+  logout 
+}

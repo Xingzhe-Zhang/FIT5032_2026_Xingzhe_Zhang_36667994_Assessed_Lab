@@ -14,5 +14,4 @@
 </template>
 
 <script setup>
-// This page is used for the custom routing task.
 </script>

@@ -1,3 +1,4 @@
+<!-- Copy from NoMash-Library/src/views/HomeView.vue -->
 <script setup>
 import { computed, ref } from 'vue'
 import DataTable from 'primevue/datatable'
@@ -28,11 +29,9 @@ const errors = ref({
 
 const friendMessage = computed(() => {
   const reason = formData.value.reason.toLowerCase()
-
   if (reason.includes('friend')) {
     return 'Great to have a friend'
   }
-
   return ''
 })
 
@@ -131,7 +130,6 @@ const submitForm = () => {
   if (!validateForm()) {
     return
   }
-
   submittedCards.value.push({
     username: formData.value.username,
     isAustralian: formData.value.isAustralian,
@@ -318,6 +316,7 @@ const clearForm = () => {
     </div>
   </div>
 </template>
+
 
 <style scoped>
 .container {
