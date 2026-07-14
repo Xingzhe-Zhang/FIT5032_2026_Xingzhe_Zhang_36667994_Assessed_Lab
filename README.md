@@ -115,6 +115,52 @@ Technologies used:
 
 Bootstrap classes used include `container`, `row`, `col-12`, `col-sm-10`, `col-md-8`, `col-lg-6`, `mx-auto`, `form-control`, `form-check`, `form-select`, `btn`, `btn-primary`, `btn-secondary` and `card`.
 
+> Note: In Week 4, the Bootstrap card display was replaced by PrimeVue DataTable for better tabular presentation of submitted user records.
+
+## Week 4: Form Validation and PrimeVue DataTable
+
+Week 4 extends the `xzhang-library` project by adding form validation and replacing the submitted user cards with a PrimeVue DataTable.
+
+Main features:
+
+- Demonstrate HTML built-in validation using attributes such as `required`, `minlength`, and `maxlength`
+- Implement Vue-based custom validation in `Form.vue`
+- Store validation errors in a reactive `errors` object
+- Validate username length
+- Validate password strength using length, uppercase, lowercase, number, and special character checks
+- Add extra validations for gender selection and reason length
+- Prevent invalid form submissions
+- Display customised validation messages using Bootstrap text utility classes
+- Install and configure PrimeVue with the Aura theme
+- Display submitted user information using PrimeVue DataTable
+
+Form validations:
+
+- Username must be at least 3 characters
+- Password must be at least 8 characters
+- Password must contain uppercase, lowercase, number, and special character
+- Gender must be selected
+- Reason for joining must be between 10 and 200 characters
+
+Key files:
+
+- `src/components/Form.vue`
+- `src/main.js`
+- `package.json`
+
+Technologies used:
+
+- Vue.js 3 Composition API
+- `ref`
+- `v-model`
+- `@blur`
+- `@input`
+- `@submit.prevent`
+- Bootstrap 5
+- PrimeVue
+- `@primevue/themes`
+- PrimeVue DataTable
+
 ## Running a Project
 
 Open a terminal in the required project folder, install dependencies and start the development server.
