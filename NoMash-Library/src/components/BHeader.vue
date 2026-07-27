@@ -66,6 +66,15 @@
         <li class="nav-item">
           <router-link to="/FireRegister" class="nav-link" active-class="active">Firebase Register</router-link>
         </li>
+        <li class="nav-item">
+          <RouterLink
+            to="/addbook"
+            class="nav-link"
+            active-class="active"
+          >
+            Add Book
+          </RouterLink>
+        </li>
       </ul>
     </header>
   </div>
