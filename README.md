@@ -15,9 +15,9 @@ This repository stores lab work and learning tasks for **FIT5032 Internet Applic
 
 ```text
 FIT5032_2026_Xingzhe_Zhang_36667994_Assessed_Lab/
-├── 📁 week1-vue-app/          # Week 1: Vue 3 introductory lab
-├── 📁 xzhang-library/         # Week 2–4: Library web application labs
-└── 📁 NoMash-Library/   # Week 5: Events, Vue DevTools and Vue Router lab
+├── 📁 week1-vue-app/          # Lab 1: Vue 3 introductory lab
+├── 📁 xzhang-library/         # Lab 2–4: Library web application labs
+└── 📁 NoMash-Library/         # Lab 5-7: NoMash Library
 ```
 
 ## Running a Project
@@ -44,202 +44,41 @@ Then open the localhost URL shown in the terminal, for example:
 http://localhost:5173/
 ```
 
-## Week 1: Intro to Vue JS 3
+## Lab Progress
+### Lab 1 `week1-vue-app`
 
-The `week1-vue-app` project introduces the basic Vue.js 3 development workflow.
+Created and ran a Vue 3 project with Vite, added basic components, and committed the project to GitHub.
 
-Main tasks:
+### Lab 2 `xzhang-library`
 
-- Set up Visual Studio Code, Node.js and npm
-- Create and run a Vue.js 3 project with Vite
-- Test the application on localhost
-- Create a `MyName.vue` component
-- Display the student name on the welcome page
-- Commit the work to GitHub
+The  project starts as a library web application focused on one-way data binding and JSON data rendering.
+Imported and displayed JSON data using Vue directives, computed properties, list rendering, conditional rendering, and dynamic binding.
 
-Technologies used:
+### Lab 3 `xzhang-library`
 
-- Vue.js 3
-- Vite
-- Node.js
-- npm
-- Visual Studio Code
-- GitHub
+Built a responsive Bootstrap form with two-way data binding, form submission, clearing, and dynamically displayed user records.
 
-## Week 2: One-Way Data Binding in Vue JS 3
+> Note: In Lab4, the Bootstrap card display was replaced by PrimeVue DataTable for better tabular presentation of submitted user records.
 
-The `xzhang-library` project starts as a library web application focused on one-way data binding and JSON data rendering.
+### Lab 4 `xzhang-library`
 
-Main tasks:
+Extended the application with reusable Vue components and client-side form validation.
 
-- Import `authors.json` and `bookstores.json`
-- Display JSON data in `JSON.vue`
-- Use computed properties to process data
-- Render lists with `v-for`
-- Show conditional messages with `v-if` and `v-else`
-- Use attribute, class and style binding
-- Highlight George Orwell with dynamic styling
+### Lab 5 `nomash-library`
 
-Key files:
-
-- `src/components/JSON.vue`
-- `src/assets/json/authors.json`
-- `src/assets/json/bookstores.json`
-
-Technologies used:
-
-- Vue.js 3 Composition API
-- `ref`
-- `computed`
-- `v-for`
-- `v-if` / `v-else`
-- `v-bind`
-- Class and style binding
-- JSON data import
-
-## Week 3: Styling with CSS and Bootstrap in Vue JS 3
-
-Week 3 extends the `xzhang-library` project by adding Bootstrap 5 and a responsive user information form.
-
-Main features:
-
-- Create a reusable `Form.vue` component
-- Render `Form.vue` in `App.vue`
-- Build a user information form with Bootstrap styling
-- Manage form data with Vue 3 Composition API and `ref`
-- Use `v-model` for two-way form binding
-- Use `@submit.prevent` to handle form submission
-- Store submitted user data in `submittedCards`
-- Display submitted data as Bootstrap cards
-- Provide a Clear button that resets the current form only
-- Use Bootstrap grid breakpoints for responsive layout
-
-Form fields:
-
-- Username
-- Password
-- Australian Resident checkbox
-- Reason For Joining
-- Gender dropdown
-
-Key files:
-
-- `src/App.vue`
-- `src/components/Form.vue`
-- `src/main.js`
-- `src/style.css`
-
-Technologies used:
-
-- Vue.js 3
-- Vite
-- Bootstrap 5
-- JavaScript
-- HTML
-- CSS
-
-Bootstrap classes used include `container`, `row`, `col-12`, `col-sm-10`, `col-md-8`, `col-lg-6`, `mx-auto`, `form-control`, `form-check`, `form-select`, `btn`, `btn-primary`, `btn-secondary` and `card`.
-
-> Note: In Week 4, the Bootstrap card display was replaced by PrimeVue DataTable for better tabular presentation of submitted user records.
-
-## Week 4: Form Validation and PrimeVue DataTable
-
-Week 4 extends the `xzhang-library` project by adding form validation and replacing the submitted user cards with a PrimeVue DataTable.
-
-Main features:
-
-- Demonstrate HTML built-in validation using attributes such as `required`, `minlength`, and `maxlength`
-- Implement Vue-based custom validation in `Form.vue`
-- Store validation errors in a reactive `errors` object
-- Validate username length
-- Validate password strength using length, uppercase, lowercase, number, and special character checks
-- Add extra validations for gender selection and reason length
-- Prevent invalid form submissions
-- Display customised validation messages using Bootstrap text utility classes
-- Install and configure PrimeVue with the Aura theme
-- Display submitted user information using PrimeVue DataTable
-
-Form validations:
-
-- Username must be at least 3 characters
-- Password must be at least 8 characters
-- Password must contain uppercase, lowercase, number, and special character
-- Gender must be selected
-- Reason for joining must be between 10 and 200 characters
-
-Key files:
-
-- `src/components/Form.vue`
-- `src/main.js`
-- `package.json`
-
-Technologies used:
-
-- Vue.js 3 Composition API
-- `ref`
-- `v-model`
-- `@blur`
-- `@input`
-- `@submit.prevent`
-- Bootstrap 5
-- PrimeVue
-- `@primevue/themes`
-- PrimeVue DataTable
-
-## Week 5: Events, Vue DevTools and Vue Router
-
-Week 5 extends the NoMash Library starter project by adding additional event handling, component debugging with Vue DevTools, and routing functionality with Vue Router.
-
-Main features:
-
-- Add a Confirm Password field to the library registration form
-- Validate whether Password and Confirm Password match
-- Use `@blur` to trigger confirm password validation after the user leaves the field
-- Display `Passwords do not match.` when the two password fields are different
-- Add a green feedback message when Reason For Joining contains the word `friend`
-- Add a Suburb field using `v-bind:value` to demonstrate one-way data binding
-- Use Vue DevTools to inspect component state and compare `v-model` with `v-bind`
-- Install and configure Vue Router
-- Move the registration form into `src/views/HomeView.vue`
-- Create `AboutView.vue`, `LoginView.vue`, and `AccessDeniedView.vue`
-- Use `router-view` to render route components
-- Use `router-link` for navigation
-- Protect the About page using a navigation guard
-- Redirect unauthenticated users to Login
-- Show Access Denied for invalid login attempts
-- Show Login or Logout based on authentication state
+Implemented a responsive library registration form with input validation and password confirmation.
 
 Demo login credentials:
-
 - Username: `student`
 - Password: `Library@123`
 
-Key files:
+### Lab 6 `nomash-library`
 
-- `src/views/HomeView.vue`
-- `src/views/AboutView.vue`
-- `src/views/LoginView.vue`
-- `src/views/AccessDeniedView.vue`
-- `src/router/index.js`
-- `src/components/BHeader.vue`
-- `src/auth.js`
-- `src/App.vue`
-- `src/main.js`
+Configured Vue Router, login state management, protected routes, redirects, and an access-denied page.
 
-Technologies used:
+### Lab 7 `nomash-library`
+Implemented Firebase email/password registration, login, and logout. Added role1 and role2, stored user roles in the Firestore users collection, and displayed the authenticated user's role.
 
-- Vue.js 3 Composition API
-- Vue Router
-- Navigation guards
-- `router-link`
-- `router-view`
-- `v-model`
-- `v-bind`
-- `@blur`
-- `@input`
-- `@submit.prevent`
-- `@click`
-- Vue DevTools
-- Bootstrap 5
-- PrimeVue
+### Lab 8 `nomash-library`
+Implemented an Add Book page and Firestore book management with create, retrieve, update, and delete operations. Added queries using where, orderBy, limit, and their combined use.
 
