@@ -46,7 +46,9 @@ import {
   getAuth,
   signInWithEmailAndPassword
 } from 'firebase/auth'
+import { doc, getDoc } from 'firebase/firestore'
 import { useRouter } from 'vue-router'
+import db from '../firebase/init.js'
 
 const email = ref('')
 const password = ref('')
@@ -63,10 +65,17 @@ const signin = () => {
     email.value,
     password.value
   )
-    .then(() => {
-      console.log('Firebase Login Successful!')
-      console.log(auth.currentUser)
+    .then(async (userCredential) => {
+      const userDocument = await getDoc(
+        doc(db, 'users', userCredential.user.uid)
+      )
+      const role = userDocument.data()?.role || 'No role'
 
+      console.log('Firebase Login Successful!', {
+        uid: userCredential.user.uid,
+        email: userCredential.user.email,
+        role
+      })
       router.push('/')
     })
     .catch((error) => {

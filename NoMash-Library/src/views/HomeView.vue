@@ -1,8 +1,26 @@
 <!-- Copy from NoMash-Library/src/views/HomeView.vue -->
 <script setup>
-import { computed, ref } from 'vue'
+import { computed, onUnmounted, ref } from 'vue'
+import { getAuth, onAuthStateChanged } from 'firebase/auth'
+import { doc, getDoc } from 'firebase/firestore'
 import DataTable from 'primevue/datatable'
 import Column from 'primevue/column'
+import db from '../firebase/init.js'
+
+// Home page reads role
+const firebaseRole = ref('')
+
+const stopAuthListener = onAuthStateChanged(getAuth(), async (user) => {
+  if (!user) {
+    firebaseRole.value = ''
+    return
+  }
+
+  const userDocument = await getDoc(doc(db, 'users', user.uid))
+  firebaseRole.value = userDocument.data()?.role || 'No role'
+})
+
+onUnmounted(stopAuthListener)
 
 const createEmptyForm = () => ({
   username: '',
@@ -157,6 +175,10 @@ const clearForm = () => {
 
 <template>
   <div class="container mt-5">
+    <div v-if="firebaseRole" class="alert alert-info py-2 text-center">
+      Current role: <strong>{{ firebaseRole }}</strong>
+    </div>
+
     <div class="row">
       <div class="col-md-8 offset-md-2">
         <h1 class="text-center">🗄️ W5. Library Registration Form</h1>

@@ -27,6 +27,14 @@
             />
           </div>
 
+          <div class="mb-3">
+            <label for="register-role" class="form-label">Role</label>
+            <select id="register-role" v-model="role" class="form-select">
+              <option value="role1">Role 1</option>
+              <option value="role2">Role 2</option>
+            </select>
+          </div>
+
           <button type="submit" class="btn btn-primary">
             Save to Firebase
           </button>
@@ -44,12 +52,16 @@
 import { ref } from 'vue'
 import {
   getAuth,
-  createUserWithEmailAndPassword
+  createUserWithEmailAndPassword,
+  signOut
 } from 'firebase/auth'
+import { doc, setDoc } from 'firebase/firestore'
 import { useRouter } from 'vue-router'
+import db from '../firebase/init.js'
 
 const email = ref('')
 const password = ref('')
+const role = ref('role1')
 const errorMessage = ref('')
 
 const router = useRouter()
@@ -63,8 +75,18 @@ const register = () => {
     email.value,
     password.value
   )
-    .then(() => {
-      console.log('Firebase Register Successful!')
+    .then(async (userCredential) => {
+      await setDoc(doc(db, 'users', userCredential.user.uid), {
+        email: userCredential.user.email,
+        role: role.value
+      })
+
+      console.log('Firebase Register Successful!', {
+        email: userCredential.user.email,
+        role: role.value
+      })
+
+      await signOut(auth)
       router.push('/FireLogin')
     })
     .catch((error) => {
