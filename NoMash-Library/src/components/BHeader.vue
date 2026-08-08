@@ -84,6 +84,15 @@
             Get Book Count
           </RouterLink>
         </li>
+        <li class="nav-item">
+          <RouterLink
+            to="/BookShowcase"
+            class="nav-link"
+            active-class="active"
+          >
+            Book Showcase
+          </RouterLink>
+        </li>
       </ul>
     </header>
   </div>

@@ -8,6 +8,7 @@ import FirebaseSigninView from '../views/FirebaseSigninView.vue'
 import FirebaseRegisterView from '../views/FirebaseRegisterView.vue'
 import AddBookView from '../views/AddBookView.vue'
 import GetBookCountView from '../views/GetBookCountView.vue'
+import BookShowcaseView from '../views/BookShowcaseView.vue'
 
 const routes = [
   { path: '/', name: 'Home', component: HomeView },
@@ -38,6 +39,11 @@ const routes = [
     path: '/GetBookCount',
     name: 'GetBookCount',
     component: GetBookCountView
+  },
+  {
+    path: '/BookShowcase',
+    name: 'BookShowcase',
+    component: BookShowcaseView
   },
   { path: '/:pathMatch(.*)*', redirect: '/' }
 ]

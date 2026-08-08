@@ -1,11 +1,11 @@
-# countBooks
+# bookShowcase
 
-Lab 9.1 Alibaba Cloud Web Function. It counts documents in the Firestore
-`books` collection and returns `{ "count": number }`.
+Lab 9.2 Alibaba Cloud Web Function. It reads the Firestore `books` collection
+and returns a book list with one featured book.
 
 ## Deployment
 
-- Function name: `countBooks`
+- Function name: `bookShowcase`
 - Startup command: `npm run start`
 - Listening port: `9000`
 - Environment variable: `FIREBASE_SERVICE_ACCOUNT_JSON`
