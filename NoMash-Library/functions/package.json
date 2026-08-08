@@ -1,0 +1,12 @@
+{
+  "name": "nomash-library-functions",
+  "private": true,
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "firebase-admin": "^13.4.0"
+  }
+}

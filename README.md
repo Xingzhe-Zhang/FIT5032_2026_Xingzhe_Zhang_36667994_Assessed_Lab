@@ -82,3 +82,6 @@ Implemented Firebase email/password registration, login, and logout. Added role1
 ### Lab 8 `nomash-library`
 Implemented an Add Book page and Firestore book management with create, retrieve, update, and delete operations. Added queries using where, orderBy, limit, and their combined use.
 
+### Lab 9 `nomash-library`
+Added a `GetBookCount` page that calls an Alibaba Cloud Function Compute HTTP function. The function uses Firebase Admin SDK to count documents in the Firestore `books` collection and returns the result as JSON.
+

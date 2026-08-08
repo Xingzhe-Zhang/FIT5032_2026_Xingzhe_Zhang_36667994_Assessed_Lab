@@ -75,6 +75,15 @@
             Add Book
           </RouterLink>
         </li>
+        <li class="nav-item">
+          <RouterLink
+            to="/GetBookCount"
+            class="nav-link"
+            active-class="active"
+          >
+            Get Book Count
+          </RouterLink>
+        </li>
       </ul>
     </header>
   </div>
